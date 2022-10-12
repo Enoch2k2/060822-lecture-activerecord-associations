@@ -1,6 +1,8 @@
 class Book < ActiveRecord::Base
   belongs_to :author # REALLY smart attr_accessors
   belongs_to :genre
+
+  validates :title, presence: true
 end
 
 # author = Author.create(name: "Frodo")
